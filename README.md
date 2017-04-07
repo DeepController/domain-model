@@ -1,4 +1,3 @@
 # Simple Domain Model
 
-
-TODO
+A simple model to use various complex composite type
