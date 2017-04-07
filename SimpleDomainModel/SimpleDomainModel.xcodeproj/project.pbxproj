@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3DAD44521E970210000D0EAA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD44511E970210000D0EAA /* XCTest.framework */; };
 		FE6891181CB5D8E40018C340 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6891171CB5D8E40018C340 /* main.swift */; };
 		FE6891251CB5D90B0018C340 /* SimpleDomainModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6891241CB5D90B0018C340 /* SimpleDomainModelTests.swift */; };
 		FE68912A1CB5D9130018C340 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6891171CB5D8E40018C340 /* main.swift */; };
@@ -29,7 +28,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3DAD44511E970210000D0EAA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FE6891141CB5D8E40018C340 /* SimpleDomainModel */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimpleDomainModel; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6891171CB5D8E40018C340 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FE6891221CB5D90B0018C340 /* SimpleDomainModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleDomainModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DAD44521E970210000D0EAA /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,21 +56,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3DAD44501E970210000D0EAA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DAD44511E970210000D0EAA /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		FE68910B1CB5D8E40018C340 = {
 			isa = PBXGroup;
 			children = (
 				FE6891161CB5D8E40018C340 /* SimpleDomainModel */,
 				FE6891231CB5D90B0018C340 /* SimpleDomainModelTests */,
 				FE6891151CB5D8E40018C340 /* Products */,
-				3DAD44501E970210000D0EAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

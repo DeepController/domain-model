@@ -25,7 +25,7 @@ open class TestMe {
 //
 public struct Money {
 	public var amount : Int
-	public var currency : String
+	public var currency : CurrencyType
 	
 	public enum CurrencyType {
 		case USD
@@ -34,47 +34,43 @@ public struct Money {
 		case CAN
 	}
 	
-	public func convert(_ to: String) -> Money {
+	public func convert(_ to: CurrencyType) -> Money {
+		
 		var temp = Money(amount: self.amount, currency: to)
 		
 		switch currency {
-			case "GBP":
+			case .GBP:
 				temp.amount *= 2
-			case "EUR":
+			case .EUR:
 				temp.amount = temp.amount / 3 * 2
-			case "CAN":
+			case .CAN:
 				temp.amount = temp.amount / 5 * 4
 			default:
 				break
 		}
 		
 		switch to {
-		case "GBP":
-			temp.amount /= 2
-			return temp
-		case "EUR":
-			temp.amount = temp.amount / 2 * 3
-			return temp
-		case "CAN":
-			temp.amount = temp.amount / 4 * 5
-			return temp
-		case "USD":
-			return temp
-		default:
-//			return nil
-			return temp
+			case .GBP:
+				temp.amount /= 2
+				return temp
+			case .EUR:
+				temp.amount = temp.amount / 2 * 3
+				return temp
+			case .CAN:
+				temp.amount = temp.amount / 4 * 5
+				return temp
+			case .USD:
+				return temp
 		}
 	}
 	
 	public func add(_ to: Money) -> Money {
 		let temp = self.convert(to.currency)
-//		guard temp != nil else { return temp }
 		return Money(amount: to.amount + temp.amount, currency: to.currency)
 	}
 	
 	public func subtract(_ from: Money) -> Money {
 		let temp = self.convert(self.currency)
-//		guard temp != nil else { return temp }
 		return Money(amount: from.amount - temp.amount, currency: from.currency)
 	}
 }
